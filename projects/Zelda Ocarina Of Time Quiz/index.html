@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/triforce.png">
+    <title>Hero's Knowledge: Ocarina of Time Quiz</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <div class="content">
+      <h1>Zelda: Ocarina of Time</h1>
+      <img
+        class="main-img"
+        src="https://upload.wikimedia.org/wikipedia/en/5/57/The_Legend_of_Zelda_Ocarina_of_Time.jpg"
+        alt="Zelda Ocarina of Time Cover"
+      >
+      <p>
+        Test your knowledge about <strong>Zelda: Ocarina of Time</strong>! Answer the quiz below:
+      </p>
+      <form id="quizForm">
+        <div class="quiz-question">
+          <p>1. What is the name of Link's fairy companion?</p>
+          <label><input type="radio" name="q1" value="Navi">Navi</label>
+          <label><input type="radio" name="q1" value="Tatl">Tatl</label>
+          <label><input type="radio" name="q1" value="Midna">Midna</label>
+          <label><input type="radio" name="q1" value="Fi">Fi</label>
+        </div>
+        <div class="quiz-question">
+          <p>2. What instrument does Link play?</p>
+          <label><input type="radio" name="q2" value="Ocarina">Ocarina</label>
+          <label><input type="radio" name="q2" value="Harp">Harp</label>
+          <label><input type="radio" name="q2" value="Flute">Flute</label>
+          <label><input type="radio" name="q2" value="Guitar">Guitar</label>
+        </div>
+        <div class="quiz-question">
+          <p>3. Who is the main villain in Ocarina of Time?</p>
+          <label><input type="radio" name="q3" value="Ganondorf">Ganondorf</label>
+          <label><input type="radio" name="q3" value="Vaati">Vaati</label>
+          <label><input type="radio" name="q3" value="Ghirahim">Ghirahim</label>
+          <label><input type="radio" name="q3" value="Zant">Zant</label>
+        </div>
+        <div class="quiz-question">
+          <p>4. What is the name of the princess Link must save?</p>
+          <label><input type="radio" name="q4" value="Zelda">Zelda</label>
+          <label><input type="radio" name="q4" value="Ruto">Ruto</label>
+          <label><input type="radio" name="q4" value="Malon">Malon</label>
+          <label><input type="radio" name="q4" value="Impa">Impa</label>
+        </div>
+        <div class="quiz-question">
+          <p>5. Which temple is infamous for being difficult and confusing?</p>
+          <label><input type="radio" name="q5" value="Water Temple">Water Temple</label>
+          <label><input type="radio" name="q5" value="Fire Temple">Fire Temple</label>
+          <label><input type="radio" name="q5" value="Forest Temple">Forest Temple</label>
+          <label><input type="radio" name="q5" value="Shadow Temple">Shadow Temple</label>
+        </div>
+        <button id="mySubmit" type="submit">Submit Answers</button>
+      </form>
+      <p id="message" class="submit-message"></p>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
