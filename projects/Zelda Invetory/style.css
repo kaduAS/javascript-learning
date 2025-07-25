@@ -1,0 +1,79 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #2d3250;
+  color: #f5e64e;
+  font-family: 'Segoe UI', Tahoma, sans-serif;
+  padding: 40px 20px;
+  min-height: 100vh;
+}
+
+
+#myH1 {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+  color: #f9b17a; 
+}
+
+#inventoryForm {
+  background-color: #424769; 
+  border-radius: 12px;
+  padding: 24px;
+  max-width: 400px;
+  margin: 0 auto 40px auto;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.5);
+}
+
+#inventoryForm input,
+#inventoryForm select {
+  padding: 12px;
+  background-color: #fff9e5;
+  border: 2px solid #676f9d; 
+  border-radius: 6px;
+  font-size: 1rem;
+  color: #222;
+}
+
+#myBtn {
+  padding: 12px;
+  background-color: #676f9d;
+  color: white;
+  font-weight: bold;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+#myBtn:hover {
+  background-color: #676f9db6;
+}
+
+/* Lista de Itens */
+#inventoryList {
+  list-style: none;
+  padding: 0;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+#inventoryList li {
+  background-color: #b86f41;
+  border-left: 5px solid #f5e64e; /* amarelo */
+  padding: 14px 18px;
+  margin-bottom: 12px;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
