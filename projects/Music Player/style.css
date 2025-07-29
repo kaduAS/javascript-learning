@@ -1,0 +1,233 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #29333C;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.music-player{
+    width: 350px;
+    height: 550px;
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.08);
+    box-shadow: 0 40px 100px rgba(255, 255, 255, 0.1);
+    padding: 30px;
+    overflow: hidden;
+    color: #83949E;
+}
+
+.song-name,.artist-name{
+    text-align: center;
+    text-transform: capitalize;
+}
+
+.song-name{
+    font-size: 44px;
+    font-weight: 500; 
+    margin-bottom: 10px;
+}
+
+.artist-name{
+    font-size: 20px;
+}
+
+.disk{
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  background-image: url('assets/From Zero (Deluxe Edition) - 2LP _ Green Translucent.jpg');
+  background-size: cover;
+  background-position: center;
+  margin: 40px auto;
+  box-shadow: 0 0 0 10px rgba(255, 255, 255, 0.08);
+  animation: rotate 5s linear infinite;
+  animation-play-state: paused;
+}
+
+.disk.rotating{
+    animation-play-state: running;
+}
+
+.song-slider{
+    width: 100%;
+    position: relative;
+}
+
+.seek-bar {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 100%;
+    height: 5px;
+    border-radius: 10px;
+    background-color: #1e202c;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.seek-bar::-webkit-slider-runnable-track {
+    height: 5px;
+    border-radius: 10px;
+    background-color: #1e202c;
+}
+
+.seek-bar::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    background-color: #83949E;
+    border-radius: 50%;
+    cursor: pointer;
+    border: none;
+    margin-top: -7.5px;
+}
+
+.seek-bar::-moz-range-track {
+    height: 5px;
+    border-radius: 10px;
+    background-color: #1A1C20;
+}
+
+.seek-bar::-moz-range-thumb {
+    width: 1px;
+    height: 20px;
+    background-color: #83949E;
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+    box-shadow: -400px 0 0 400px #83949E;
+}
+
+.current-time, .song-duration{
+    font-size: 14px;
+}
+
+.song-duration{
+    position: absolute;
+    right: 0;
+}
+
+.controls{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    margin: auto;
+    margin-top: 20px;
+}
+
+.play{
+    position: relative;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: #83949E;
+    cursor: pointer;
+    border: none;
+}
+
+.play span{
+    position: absolute;
+    top: 50%;
+    left: 25%;
+    transform: translateY(-50%);
+    width: 10px;
+    height: 30px;
+    border-radius: 2px;
+    background: #1A1C20;
+    transition: .5s;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+}
+
+.play span:nth-child(2){
+    left: 60%;
+    transform-origin: center;
+}
+
+.play.pause span:nth-child(2){
+    transform: translateY(-50%) scaleY(0);
+}
+
+.play.pause span:nth-child(1){
+    width: 35%;
+    left: 40%;
+    translate: (-50%, -50%);
+    border-radius: 0;
+    clip-path: polygon(0 0, 100% 50%, 100% 50%, 0% 100%);
+}
+
+.play.pause{
+    animation: pulse 2s linear;
+}
+
+@keyframes pulse{
+    0%{
+        box-shadow: 0;;
+    }
+    50%{
+        box-shadow: 0 0 0 5px rgba(255, 255, 255, 0.1);
+    }
+    100%{
+        box-shadow: 0 0 0 5px rgba(255, 255, 255, 0.4);
+    }
+}
+
+.play.pause{
+    animation: pulse 2s linear infinite;
+}
+
+@keyframes pulse{
+    0%{
+        box-shadow: 0;
+    }
+    50%{
+        box-shadow: 0 0 0 5px rgba(255, 255, 255, 0.1);
+    }
+    100%{
+        box-shadow: 0 0 0 5px rgba(255, 255, 255, 0.1);
+    }
+}
+
+.btn-backward, .btn-forward{
+    width: 50px;
+    height: 50px;
+    background: #83949E ;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    cursor: pointer;
+}
+
+@keyframes rotate{
+    0%{
+        transform: rotate(0);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
+.btn-backward{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn-forward{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
