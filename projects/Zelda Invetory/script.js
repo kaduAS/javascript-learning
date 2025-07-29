@@ -21,17 +21,43 @@ function renderInventory() {
   listContainer.innerHTML = '';
 
   inventory.forEach((item, index) => {
-    const icon = icon[item.type] || '📦';
-  });
+    const icon = icons[item.type] || '📦';
 
-  const li = document.createElement('li');
-  li.innerHTML = `<span>${icon} ${item.name}</span>
-  <button class = "remove-btn">Remove</button>
-  `;
+    const li = document.createElement('li');
+    li.innerHTML = `
+      <span>${icon} ${item.name}</span>
+      <button class="remove-btn">Remove</button>
+    `;
 
-  li.querySelector('.remove-btn').addEventListener('click', () => {
-    inventory.sploce(inedx, 1);
-    saveInventory();
-    renderInventory();
+    li.querySelector('.remove-btn').addEventListener('click', () => {
+      inventory.splice(index, 1);
+      saveInventory();
+      renderInventory();
+    });
+
+    listContainer.appendChild(li);
   });
 }
+
+form.addEventListener('submit', (e) => {
+  e.preventDefault();
+
+  const name = nameInput.value.trim();
+  const type = typeSelect.value;
+
+  if (name) {
+    inventory.push({ name, type });
+    saveInventory();
+    renderInventory();
+
+    nameInput.value = '';
+  }
+});
+
+// Item inicial para exemplo
+if (inventory.length === 0) {
+  inventory.push({ name: 'Master Sword', type: 'weapon' });
+  saveInventory();
+}
+
+renderInventory();

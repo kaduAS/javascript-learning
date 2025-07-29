@@ -70,6 +70,24 @@ body {
   box-shadow: 0 4px 12px rgba(255, 255, 255, 0.2);
 }
 
+/* Remove Button */
+.remove-btn {
+  padding: 10px 14px;
+  background: linear-gradient(135deg, #8B0000, #5C0000);
+  color: #FFFFFF;
+  font-weight: bold;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: transform 0.2s ease, background 0.3s ease, box-shadow 0.3s ease;
+}
+
+.remove-btn:hover {
+  background: linear-gradient(135deg, #A40000, #730000);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(255, 0, 0, 0.3);
+}
+
 /* List */
 #inventoryList {
   list-style: none;
