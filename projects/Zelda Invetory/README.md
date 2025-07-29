@@ -1,8 +1,7 @@
 ## Projects
 
-### Zelda: A Link to the Past – Inventory System
-
-An interactive and dynamic inventory management application inspired by *The Legend of Zelda: A Link to the Past*. This project allows users to add, categorize, and manage items with Zelda-themed icons, offering a visually immersive experience. The UI is styled to match the dark, mysterious atmosphere of Hyrule’s adventures.
+### Zelda
+An interactive and dynamic inventory management application inspired by *The Legend of Zelda*. This project allows users to add, categorize, and manage items with Zelda-themed icons, offering a visually immersive experience. The UI is styled to match the dark, mysterious atmosphere of Hyrule’s adventures.
 
 **Core JavaScript Concepts Applied:**
 
